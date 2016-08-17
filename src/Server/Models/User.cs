@@ -19,7 +19,10 @@ namespace Server.Models
         public byte[] Salt { get; set; }
         public virtual List<File> Files { get; set; }
 
-        public User() { }
+        // Constructor to make Entity Framework work
+        public User() { }   
+
+        // Constructor to create new Users
         public User(string username, string email, string password)
         {
             Username = username;

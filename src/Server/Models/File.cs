@@ -18,8 +18,9 @@ namespace Server.Models
         public int OwnerId { get; set; }
 
         [ForeignKey("OwnerId")]
-        public User Owner { get
-            {
+        public User Owner {
+            // Lazy load the Owner property from the Database
+            get {
                 if (_owner != null)
                     return _owner;
                 using (var db = new AppDbContext())
@@ -28,6 +29,7 @@ namespace Server.Models
             }
             set { _owner = value; } }
 
+        // Hidden property for lazyloading Owner-property
         private User _owner;
 
         // Constructor for EF
