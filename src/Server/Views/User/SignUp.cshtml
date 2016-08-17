@@ -1,0 +1,14 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model SignUpViewModel
+
+<form method="post">
+    <label asp-for="Username"></label><input asp-for="Username" /> <br />
+    <label asp-for="Email"></label><input asp-for="Email" /> <br />
+    <label asp-for="Password"></label><input asp-for="Password" type="password" /> <br />
+    <input type="submit" />
+</form>
